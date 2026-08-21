@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enquiries – Staff Welfare Scheme</title>
+  <meta name="description" content="Get in touch with the Staff Welfare Scheme team. We respond to all enquiries within 2 working days."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23003087'/><text y='.9em' font-size='70' x='14' fill='white' font-weight='700'>S</text></svg>"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div class="nav-overlay" aria-hidden="true"></div>
+<nav class="navbar" role="navigation">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">SWS</div><div class="nav-logo-text"><span class="nav-logo-title">Staff Welfare Scheme</span><span class="nav-logo-sub">Member Services Portal</span></div></a>
+    <ul class="nav-links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="benefits.html">Benefits</a></li><li><a href="apply.html">Apply</a></li><li><a href="faq.html">FAQs</a></li><li><a href="enquiries.html" class="active">Enquiries</a></li></ul>
+    <div class="nav-actions"><a href="login.html" class="btn btn-outline btn-sm">Member Login</a><a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a></div>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right" style="font-size:0.625rem"></i><span>Enquiries</span></nav>
+      <h1>Get in Touch</h1>
+      <p>We aim to respond to all enquiries within 2 working days.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap:40px;align-items:flex-start">
+      <!-- CONTACT FORM -->
+      <div>
+        <h2 style="font-size:1.375rem;margin-bottom:8px">Send Us a Message</h2>
+        <p style="margin-bottom:24px;color:var(--text-medium)">Fill in the form below and a member of our team will get back to you shortly.</p>
+
+        <!-- Success message -->
+        <div id="contact-success" class="hidden" style="background:var(--success-bg);border:1px solid rgba(56,161,105,0.3);border-radius:var(--radius);padding:20px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start">
+          <i class="fa-solid fa-circle-check" style="color:var(--success);font-size:1.25rem;margin-top:2px"></i>
+          <div><strong>Message Sent Successfully!</strong><p style="font-size:0.875rem;margin-top:4px">Thank you for getting in touch. We will respond within 2 working days.</p></div>
+        </div>
+
+        <form id="contact-form" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="cFullName">Full Name <span class="required">*</span></label><input id="cFullName" name="fullName" class="form-control" type="text" required placeholder="Your full name"/></div>
+            <div class="form-group"><label class="form-label" for="cEmail">Email Address <span class="required">*</span></label><input id="cEmail" name="email" class="form-control" type="email" required placeholder="your@email.com"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="cPhone">Phone Number</label><input id="cPhone" name="phone" class="form-control" type="tel" placeholder="+234 800 000 0000" data-type="phone"/></div>
+            <div class="form-group"><label class="form-label" for="cSubject">Subject <span class="required">*</span></label>
+              <select id="cSubject" name="subject" class="form-control" required>
+                <option value="">Select a subject</option>
+                <option>General Enquiry</option>
+                <option>Membership Application</option>
+                <option>Benefits Query</option>
+                <option>Contribution Issues</option>
+                <option>Complaint / Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label class="form-label" for="cMessage">Message <span class="required">*</span></label><textarea id="cMessage" name="message" class="form-control" required rows="6" placeholder="Please describe your enquiry in detail..."></textarea></div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div>
+        <h2 style="font-size:1.375rem;margin-bottom:20px">Contact Information</h2>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-info-body"><h4>Phone</h4><p>+234 800 000 0000<br/><small>Mon – Fri, 8:00 AM – 5:00 PM</small></p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-info-body"><h4>Email</h4><p>info@staffwelfare.org<br/><small>We respond within 2 working days</small></p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-info-body"><h4>Office Address</h4><p>1 Welfare House<br/>Victoria Island, Lagos<br/>Nigeria</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
+          <div class="contact-info-body"><h4>Office Hours</h4><p>Monday – Friday: 8:00 AM – 5:00 PM<br/>Saturday – Sunday: Closed</p></div>
+        </div>
+        <!-- MAP PLACEHOLDER -->
+        <div class="map-placeholder" role="img" aria-label="Office location map">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Our Location – Victoria Island, Lagos</span>
+          <small style="opacity:0.6;font-size:0.8125rem">1 Welfare House, Lagos, Nigeria</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENT CONTACTS -->
+<section class="section bg-lighter" aria-labelledby="dept-heading">
+  <div class="container">
+    <div class="section-header"><div class="section-label">Direct Contact</div><h2 class="section-title" id="dept-heading">Department Contacts</h2></div>
+    <div class="grid grid-3 reveal">
+      <div class="card" style="text-align:center">
+        <div class="card-icon lg" style="margin:0 auto 16px"><i class="fa-solid fa-user-plus"></i></div>
+        <h3>Membership</h3>
+        <p>For new applications, membership queries, and account issues.</p>
+        <a href="mailto:membership@staffwelfare.org" style="display:block;margin-top:16px;font-weight:600;color:var(--primary-light)">membership@staffwelfare.org</a>
+        <p style="margin-top:6px;font-size:0.875rem">+234 800 000 0001</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon lg accent" style="margin:0 auto 16px"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h3>Benefits</h3>
+        <p>For benefit applications, status enquiries, and appeals.</p>
+        <a href="mailto:benefits@staffwelfare.org" style="display:block;margin-top:16px;font-weight:600;color:var(--primary-light)">benefits@staffwelfare.org</a>
+        <p style="margin-top:6px;font-size:0.875rem">+234 800 000 0002</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon lg" style="margin:0 auto 16px;background:var(--success-bg);color:var(--success)"><i class="fa-solid fa-gears"></i></div>
+        <h3>Administration</h3>
+        <p>For general administration, governance, and complaints.</p>
+        <a href="mailto:admin@staffwelfare.org" style="display:block;margin-top:16px;font-weight:600;color:var(--primary-light)">admin@staffwelfare.org</a>
+        <p style="margin-top:6px;font-size:0.875rem">+234 800 000 0003</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><div class="footer-logo-icon">SWS</div><div><span class="footer-logo-title">Staff Welfare Scheme</span><span class="footer-logo-sub">Member Services Portal</span></div></div><p class="footer-tagline">Dedicated to the financial well-being and welfare of all registered staff members since 2012.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="benefits.html">Benefits</a><a href="apply.html">Apply</a><a href="faq.html">FAQs</a><a href="enquiries.html">Enquiries</a><a href="login.html">Member Login</a></div></div>
+      <div class="footer-col"><h4>Contact Us</h4><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+234 800 000 0000</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@staffwelfare.org</span></div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1 Welfare House, Victoria Island, Lagos, Nigeria</span></div></div></div>
+      <div class="footer-col"><h4>Important</h4><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookie Policy</a><a href="#">Sitemap</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Staff Welfare Scheme. All Rights Reserved.</span><span>Designed with care for our members</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

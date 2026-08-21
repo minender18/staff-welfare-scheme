@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard – Staff Welfare Scheme</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23003087'/><text y='.9em' font-size='70' x='14' fill='white' font-weight='700'>S</text></svg>"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/dashboard.css"/>
+</head>
+<body>
+<div class="dash-layout">
+<div class="sidebar-overlay" aria-hidden="true"></div>
+
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar" role="navigation" aria-label="Admin navigation">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">SWS</div>
+      <div><span class="sidebar-logo-text">Admin Portal</span><span class="sidebar-logo-sub">Staff Welfare Scheme</span></div>
+    </div>
+    <button class="sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-section-label">Overview</div>
+    <a href="admin.html" class="sidebar-nav-item active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+
+    <div class="sidebar-section-label">Members</div>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-users"></i> View All Members</a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-user-plus"></i> Add Member</a>
+
+    <div class="sidebar-section-label">Applications</div>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-file-lines"></i> Membership Applications <span class="badge-count">7</span></a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-hand-holding-heart"></i> Welfare Requests <span class="badge-count">18</span></a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-inbox"></i> Enquiries <span class="badge-count">7</span></a>
+
+    <div class="sidebar-section-label">Content</div>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-bullhorn"></i> Announcements</a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-calendar"></i> Events</a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-folder-open"></i> Documents</a>
+
+    <div class="sidebar-section-label">Admin</div>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-chart-bar"></i> Reports</a>
+    <a href="#" class="sidebar-nav-item"><i class="fa-solid fa-gear"></i> Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="sidebar-user-avatar" style="background:var(--accent)">SA</div>
+      <div><div class="sidebar-user-name">Scheme Admin</div><div class="sidebar-user-role">Super Administrator</div></div>
+    </div>
+    <a href="index.html" class="sidebar-nav-item logout" style="margin-top:10px"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  </div>
+</aside>
+
+<main class="dash-main">
+  <!-- TOPBAR -->
+  <header class="dash-topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" aria-label="Toggle sidebar"><i class="fa-solid fa-bars"></i></button>
+      <span class="page-title">Admin Dashboard</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-welcome">Scheme Admin — <span style="color:var(--accent);font-weight:700;font-size:0.75rem;background:rgba(245,166,35,0.1);padding:2px 8px;border-radius:var(--radius-full)">Super Admin</span></span>
+      <button class="notif-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="notif-dot" aria-hidden="true"></span></button>
+      <div class="topbar-avatar" style="background:var(--accent)" role="button" tabindex="0">SA</div>
+    </div>
+  </header>
+
+  <div class="dash-content">
+    <!-- ADMIN STATS -->
+    <div class="admin-stat-grid">
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-users"></i></div></div>
+        <div class="dash-stat-value" data-counter data-target="2547">0</div>
+        <div class="dash-stat-label">Total Members</div>
+      </div>
+      <div class="dash-stat-card warning">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-file-lines"></i></div><span class="badge badge-warning">New</span></div>
+        <div class="dash-stat-value" data-counter data-target="23">0</div>
+        <div class="dash-stat-label">New Applications</div>
+      </div>
+      <div class="dash-stat-card info">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-hand-holding-heart"></i></div><span class="badge badge-info">Pending</span></div>
+        <div class="dash-stat-value" data-counter data-target="18">0</div>
+        <div class="dash-stat-label">Welfare Requests</div>
+      </div>
+      <div class="dash-stat-card" style="--local-color:var(--error)">
+        <div class="dash-stat-top"><div class="dash-stat-icon" style="background:var(--error-bg);color:var(--error)"><i class="fa-solid fa-inbox"></i></div><span class="badge badge-error">Unread</span></div>
+        <div class="dash-stat-value" data-counter data-target="7">0</div>
+        <div class="dash-stat-label">Pending Enquiries</div>
+      </div>
+    </div>
+
+    <!-- CHARTS ROW -->
+    <div class="grid grid-2" style="gap:24px;margin-bottom:24px">
+      <div class="chart-container">
+        <div class="chart-header"><span class="chart-title">New Members – Last 6 Months</span><button class="btn btn-sm btn-outline" data-export-csv="members-chart-table" data-export-filename="members-growth.csv"><i class="fa-solid fa-download"></i> Export</button></div>
+        <div class="bar-chart" id="members-chart" aria-label="Members growth chart" style="height:160px">
+          <div class="bar-item"><div class="bar-fill" style="height:35%" data-value="35"></div><div class="bar-label">Nov</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:50%" data-value="50"></div><div class="bar-label">Dec</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:40%" data-value="40"></div><div class="bar-label">Jan</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:65%" data-value="65"></div><div class="bar-label">Feb</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:55%" data-value="55"></div><div class="bar-label">Mar</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:80%" data-value="80"></div><div class="bar-label">Apr</div></div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-header"><span class="chart-title">Applications by Type</span></div>
+        <div class="bar-chart" id="app-type-chart" aria-label="Applications by type" style="height:160px">
+          <div class="bar-item"><div class="bar-fill" style="height:80%;background:linear-gradient(to top,var(--info),rgba(49,130,206,0.6))" data-value="80"></div><div class="bar-label" style="font-size:0.7rem">Medical</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:55%;background:linear-gradient(to top,var(--warning),rgba(214,158,46,0.6))" data-value="55"></div><div class="bar-label" style="font-size:0.7rem">Emergency</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:42%;background:linear-gradient(to top,var(--success),rgba(56,161,105,0.6))" data-value="42"></div><div class="bar-label" style="font-size:0.7rem">Education</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:28%;background:linear-gradient(to top,var(--accent),rgba(245,166,35,0.6))" data-value="28"></div><div class="bar-label" style="font-size:0.7rem">Bereavement</div></div>
+          <div class="bar-item"><div class="bar-fill" style="height:18%;background:linear-gradient(to top,var(--primary-light),rgba(0,87,184,0.4))" data-value="18"></div><div class="bar-label" style="font-size:0.7rem">Housing</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECENT MEMBERSHIP APPLICATIONS TABLE -->
+    <div class="dash-section-title">Recent Membership Applications <a href="#" data-export-csv="member-apps-table" data-export-filename="membership-applications.csv"><i class="fa-solid fa-download"></i> Export CSV</a></div>
+    <div class="dash-table-wrapper" style="margin-bottom:24px">
+      <div class="table-filter-bar">
+        <input type="text" placeholder="Search applications..." data-table-search="member-apps-table" aria-label="Search applications"/>
+        <select aria-label="Filter by status">
+          <option value="">All Status</option>
+          <option>Pending</option>
+          <option>Approved</option>
+          <option>Rejected</option>
+        </select>
+        <div class="spacer"></div>
+        <span style="font-size:0.8125rem;color:var(--text-medium)">23 applications</span>
+      </div>
+      <table class="dash-table" id="member-apps-table" aria-label="Membership applications">
+        <thead><tr><th>Ref No.</th><th>Name</th><th>Department</th><th>Applied</th><th>Type</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody>
+          <tr><td class="ref">SWS-2026-58291</td><td>Olabisi Adewale</td><td>Finance</td><td>Jun 20, 2026</td><td>New Member</td><td><span class="badge badge-warning">Pending</span></td><td><div class="action-btns"><button class="action-btn action-btn-approve">Approve</button><button class="action-btn action-btn-reject">Reject</button><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-57834</td><td>Tunde Fashola</td><td>Operations</td><td>Jun 19, 2026</td><td>New Member</td><td><span class="badge badge-warning">Pending</span></td><td><div class="action-btns"><button class="action-btn action-btn-approve">Approve</button><button class="action-btn action-btn-reject">Reject</button><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-57201</td><td>Ngozi Okonkwo</td><td>HR</td><td>Jun 18, 2026</td><td>New Member</td><td><span class="badge badge-success">Approved</span></td><td><div class="action-btns"><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-56988</td><td>Emeka Eze</td><td>IT</td><td>Jun 17, 2026</td><td>New Member</td><td><span class="badge badge-success">Approved</span></td><td><div class="action-btns"><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-56741</td><td>Amaka Obiora</td><td>Legal</td><td>Jun 16, 2026</td><td>New Member</td><td><span class="badge badge-error">Rejected</span></td><td><div class="action-btns"><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-56542</td><td>Segun Banwo</td><td>Marketing</td><td>Jun 15, 2026</td><td>New Member</td><td><span class="badge badge-warning">Pending</span></td><td><div class="action-btns"><button class="action-btn action-btn-approve">Approve</button><button class="action-btn action-btn-reject">Reject</button><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-55918</td><td>Chiamaka Nwosu</td><td>Strategy</td><td>Jun 14, 2026</td><td>New Member</td><td><span class="badge badge-success">Approved</span></td><td><div class="action-btns"><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-55432</td><td>Dele Okafor</td><td>Finance</td><td>Jun 13, 2026</td><td>New Member</td><td><span class="badge badge-warning">Pending</span></td><td><div class="action-btns"><button class="action-btn action-btn-approve">Approve</button><button class="action-btn action-btn-reject">Reject</button><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-55001</td><td>Bukola Adeleke</td><td>Admin</td><td>Jun 12, 2026</td><td>New Member</td><td><span class="badge badge-success">Approved</span></td><td><div class="action-btns"><button class="action-btn action-btn-view">View</button></div></td></tr>
+          <tr><td class="ref">SWS-2026-54721</td><td>Ifunanya Okoro</td><td>Compliance</td><td>Jun 11, 2026</td><td>New Member</td><td><span class="badge badge-warning">Pending</span></td><td><div class="action-btns"><button class="action-btn action-btn-approve">Approve</button><button class="action-btn action-btn-reject">Reject</button><button class="action-btn action-btn-view">View</button></div></td></tr>
+        </tbody>
+      </table>
+      <div class="pagination" aria-label="Pagination">
+        <button class="page-btn" aria-label="Previous page"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="page-btn active" data-page="1">1</button>
+        <button class="page-btn" data-page="2">2</button>
+        <button class="page-btn" data-page="3">3</button>
+        <span class="page-info">of 3 pages</span>
+        <button class="page-btn" aria-label="Next page"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="grid grid-2" style="gap:24px">
+      <!-- RECENT WELFARE REQUESTS -->
+      <div>
+        <div class="dash-section-title">Recent Welfare Requests</div>
+        <div class="dash-table-wrapper">
+          <table class="dash-table" aria-label="Recent welfare requests">
+            <thead><tr><th>Ref</th><th>Member</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="ref">WR-48291</td><td>J. Adeyemi</td><td>Emergency Loan</td><td>₦150,000</td><td><span class="badge badge-warning">Pending</span></td></tr>
+              <tr><td class="ref">WR-47883</td><td>A. Bello</td><td>Medical</td><td>₦280,000</td><td><span class="badge badge-warning">Pending</span></td></tr>
+              <tr><td class="ref">WR-47421</td><td>K. Okafor</td><td>Education</td><td>₦95,000</td><td><span class="badge badge-success">Approved</span></td></tr>
+              <tr><td class="ref">WR-46998</td><td>B. Nwosu</td><td>Bereavement</td><td>₦100,000</td><td><span class="badge badge-success">Approved</span></td></tr>
+              <tr><td class="ref">WR-46712</td><td>T. Oduola</td><td>Housing Loan</td><td>₦450,000</td><td><span class="badge badge-error">Rejected</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ACTIVITY LOG -->
+      <div>
+        <div class="dash-section-title">Recent Activity Log</div>
+        <div class="dash-table-wrapper" style="padding:16px 0">
+          <div class="activity-log" style="padding:0 20px">
+            <div class="activity-item"><div class="activity-dot"></div><div class="activity-text">Approved membership application for <strong>Chiamaka Nwosu</strong></div><div class="activity-time">2 hrs ago</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:var(--success)"></div><div class="activity-text">Welfare request <strong>WR-47421</strong> approved – ₦95,000</div><div class="activity-time">4 hrs ago</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:var(--error)"></div><div class="activity-text">Membership application for <strong>Amaka Obiora</strong> rejected – Incomplete documents</div><div class="activity-time">6 hrs ago</div></div>
+            <div class="activity-item"><div class="activity-dot"></div><div class="activity-text">New enquiry received from <strong>staff member</strong> – Benefits query</div><div class="activity-time">Yesterday</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:var(--accent)"></div><div class="activity-text">Q3 2026 application window opened by Admin</div><div class="activity-time">Jun 15, 2026</div></div>
+            <div class="activity-item"><div class="activity-dot"></div><div class="activity-text">Monthly contributions batch of <strong>₦9,820,000</strong> processed for June 2026</div><div class="activity-time">Jun 1, 2026</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:var(--success)"></div><div class="activity-text">Medical Assistance benefit limit updated to ₦350,000</div><div class="activity-time">May 28, 2026</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end dash-content -->
+</main>
+</div><!-- end dash-layout -->
+
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
