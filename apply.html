@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -88,11 +88,11 @@
             </div>
             <div class="form-row">
               <div class="form-group"><label class="form-label" for="gender">Gender <span class="required">*</span></label><select id="gender" name="gender" class="form-control" required><option value="">Select gender</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
-              <div class="form-group"><label class="form-label" for="nationality">Nationality <span class="required">*</span></label><input id="nationality" name="nationality" class="form-control" type="text" required placeholder="e.g. Nigerian"/></div>
+              <div class="form-group"><label class="form-label" for="nationality">Nationality <span class="required">*</span></label><input id="nationality" name="nationality" class="form-control" type="text" required placeholder="e.g. Ghanaian"/></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label class="form-label" for="nin">NIN (National ID No.) <span class="required">*</span></label><input id="nin" name="nin" class="form-control" type="text" required placeholder="11-digit NIN" maxlength="11" data-type="nin"/></div>
-              <div class="form-group"><label class="form-label" for="phone">Phone Number <span class="required">*</span></label><input id="phone" name="phone" class="form-control" type="tel" required placeholder="+234 800 000 0000" data-type="phone"/></div>
+              <div class="form-group"><label class="form-label" for="nin">Ghana Card No. (National ID) <span class="required">*</span></label><input id="nin" name="nin" class="form-control" type="text" required placeholder="GHA-XXXXXXXXX-X" maxlength="15"/></div>
+              <div class="form-group"><label class="form-label" for="phone">Phone Number <span class="required">*</span></label><input id="phone" name="phone" class="form-control" type="tel" required placeholder="+233 300 000 000" data-type="phone"/></div>
             </div>
             <div class="form-group"><label class="form-label" for="email">Email Address <span class="required">*</span></label><input id="email" name="email" class="form-control" type="email" required placeholder="your.email@organisation.com"/></div>
             <div class="form-group"><label class="form-label" for="homeAddress">Home Address <span class="required">*</span></label><textarea id="homeAddress" name="homeAddress" class="form-control" required placeholder="Enter your full residential address" rows="3"></textarea></div>
@@ -100,7 +100,7 @@
             <h4 style="font-size:0.9375rem;margin-bottom:16px;color:var(--primary)"><i class="fa-solid fa-user-shield"></i> Next of Kin Details</h4>
             <div class="form-row">
               <div class="form-group"><label class="form-label" for="nokName">Next of Kin Name <span class="required">*</span></label><input id="nokName" name="nokName" class="form-control" type="text" required placeholder="Full name"/></div>
-              <div class="form-group"><label class="form-label" for="nokPhone">Next of Kin Phone <span class="required">*</span></label><input id="nokPhone" name="nokPhone" class="form-control" type="tel" required placeholder="+234 800 000 0000" data-type="phone"/></div>
+              <div class="form-group"><label class="form-label" for="nokPhone">Next of Kin Phone <span class="required">*</span></label><input id="nokPhone" name="nokPhone" class="form-control" type="tel" required placeholder="+233 300 000 000" data-type="phone"/></div>
             </div>
             <div class="form-group"><label class="form-label" for="nokRelationship">Relationship <span class="required">*</span></label><select id="nokRelationship" name="nokRelationship" class="form-control" required><option value="">Select relationship</option><option>Spouse</option><option>Parent</option><option>Sibling</option><option>Child</option><option>Other</option></select></div>
           </div>
@@ -151,28 +151,28 @@
               <label class="form-label">Monthly Contribution Level <span class="required">*</span></label>
               <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px">
                 <label style="border:2px solid var(--border);border-radius:var(--radius-sm);padding:16px;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:6px" id="contrib-bronze">
-                  <input type="radio" name="contributionLevel" value="Bronze – ₦2,000/month" style="display:none"/>
+                  <input type="radio" name="contributionLevel" value="Bronze – GH₵2,000/month" style="display:none"/>
                   <span style="font-weight:700;color:var(--primary)">Bronze</span>
-                  <span style="font-size:1.125rem;font-weight:700">₦2,000</span>
+                  <span style="font-size:1.125rem;font-weight:700">GH₵2,000</span>
                   <span style="font-size:0.75rem;color:var(--text-light)">per month</span>
                 </label>
                 <label style="border:2px solid var(--primary);border-radius:var(--radius-sm);padding:16px;cursor:pointer;background:var(--bg-light);display:flex;flex-direction:column;gap:6px;position:relative" id="contrib-silver">
                   <span style="position:absolute;top:-10px;right:8px;background:var(--accent);color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:var(--radius-full)">POPULAR</span>
-                  <input type="radio" name="contributionLevel" value="Silver – ₦4,000/month" checked style="display:none"/>
+                  <input type="radio" name="contributionLevel" value="Silver – GH₵4,000/month" checked style="display:none"/>
                   <span style="font-weight:700;color:var(--primary)">Silver</span>
-                  <span style="font-size:1.125rem;font-weight:700">₦4,000</span>
+                  <span style="font-size:1.125rem;font-weight:700">GH₵4,000</span>
                   <span style="font-size:0.75rem;color:var(--text-light)">per month</span>
                 </label>
                 <label style="border:2px solid var(--border);border-radius:var(--radius-sm);padding:16px;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:6px" id="contrib-gold">
-                  <input type="radio" name="contributionLevel" value="Gold – ₦8,000/month" style="display:none"/>
+                  <input type="radio" name="contributionLevel" value="Gold – GH₵8,000/month" style="display:none"/>
                   <span style="font-weight:700;color:var(--accent-dark)">Gold</span>
-                  <span style="font-size:1.125rem;font-weight:700">₦8,000</span>
+                  <span style="font-size:1.125rem;font-weight:700">GH₵8,000</span>
                   <span style="font-size:0.75rem;color:var(--text-light)">per month</span>
                 </label>
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label class="form-label" for="bankName">Bank Name <span class="required">*</span></label><select id="bankName" name="bankName" class="form-control" required><option value="">Select bank</option><option>Access Bank</option><option>First Bank of Nigeria</option><option>Guaranty Trust Bank</option><option>United Bank for Africa</option><option>Zenith Bank</option><option>Stanbic IBTC</option><option>Sterling Bank</option><option>Wema Bank</option><option>Other</option></select></div>
+              <div class="form-group"><label class="form-label" for="bankName">Bank Name <span class="required">*</span></label><select id="bankName" name="bankName" class="form-control" required><option value="">Select bank</option><option>Ghana Commercial Bank (GCB)</option><option>Ecobank Ghana</option><option>Absa Bank Ghana</option><option>Stanbic Bank Ghana</option><option>Standard Chartered Ghana</option><option>Fidelity Bank Ghana</option><option>Cal Bank</option><option>Zenith Bank Ghana</option><option>Access Bank Ghana</option><option>Agricultural Development Bank (ADB)</option><option>Other</option></select></div>
               <div class="form-group"><label class="form-label" for="accountNumber">Account Number <span class="required">*</span></label><input id="accountNumber" name="accountNumber" class="form-control" type="text" required maxlength="10" placeholder="10-digit account number"/></div>
             </div>
             <div class="form-group"><label class="form-label" for="accountName">Account Name <span class="required">*</span></label><input id="accountName" name="accountName" class="form-control" type="text" required placeholder="As on your bank account"/></div>
@@ -245,7 +245,7 @@
     <div class="footer-grid">
       <div><div class="footer-logo"><div class="footer-logo-icon">SWS</div><div><span class="footer-logo-title">Staff Welfare Scheme</span><span class="footer-logo-sub">Member Services Portal</span></div></div><p class="footer-tagline">Dedicated to the financial well-being and welfare of all registered staff members since 2012.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
       <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="benefits.html">Benefits</a><a href="apply.html">Apply</a><a href="faq.html">FAQs</a><a href="enquiries.html">Enquiries</a><a href="login.html">Member Login</a></div></div>
-      <div class="footer-col"><h4>Contact Us</h4><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+234 800 000 0000</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@staffwelfare.org</span></div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1 Welfare House, Victoria Island, Lagos, Nigeria</span></div></div></div>
+      <div class="footer-col"><h4>Contact Us</h4><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+233 300 000 000</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@staffwelfare.org</span></div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1 Welfare House, Airport City, Accra, Ghana</span></div></div></div>
       <div class="footer-col"><h4>Important</h4><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookie Policy</a></div></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Staff Welfare Scheme. All Rights Reserved.</span><span>Designed with care for our members</span></div>

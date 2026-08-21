@@ -1,4 +1,4 @@
-/* ========================================
+﻿/* ========================================
    STAFF WELFARE SCHEME - DASHBOARD JS
    ======================================== */
 
@@ -56,7 +56,7 @@
     const item = document.createElement('div');
     item.className = 'bar-item';
     item.innerHTML = `
-      <div class="bar-fill" style="height:${pct}%" data-value="₦${(d.value/1000).toFixed(0)}k"></div>
+      <div class="bar-fill" style="height:${pct}%" data-value="GH₵${(d.value/1000).toFixed(0)}k"></div>
       <div class="bar-label">${d.label}</div>`;
     chart.appendChild(item);
   });
