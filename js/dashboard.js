@@ -1,5 +1,5 @@
 ﻿/* ========================================
-   STAFF WELFARE SCHEME - DASHBOARD JS
+   RMU Staff Welfare Fund - DASHBOARD JS
    ======================================== */
 
 'use strict';

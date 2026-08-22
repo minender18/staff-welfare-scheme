@@ -1,5 +1,5 @@
-/* ========================================
-   STAFF WELFARE SCHEME - FORMS JS
+﻿/* ========================================
+   RMU Staff Welfare Fund - FORMS JS
    ======================================== */
 
 'use strict';
@@ -166,7 +166,7 @@ document.addEventListener('input', e => {
         if (currentStep === 3) generateReview();
         if (currentStep < totalSteps) showStep(currentStep + 1);
       } else {
-        if (window.SWS) SWS.toast.show('Please fix the errors', 'Fill in all required fields before proceeding.', 'error');
+        if (window.RSWF) RSWF.toast.show('Please fix the errors', 'Fill in all required fields before proceeding.', 'error');
       }
     });
   });
@@ -217,7 +217,7 @@ document.addEventListener('input', e => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span class="spinner spinner-sm"></span> Submitting...';
       setTimeout(() => {
-        const ref = 'SWS-2026-' + Math.floor(10000 + Math.random() * 90000);
+        const ref = 'RSWF-2026-' + Math.floor(10000 + Math.random() * 90000);
         const successEl = document.getElementById('form-success');
         const formEl = document.getElementById('form-card');
         if (successEl) {
@@ -241,7 +241,7 @@ document.addEventListener('input', e => {
   form.addEventListener('submit', e => {
     e.preventDefault();
     if (!validateForm(form)) {
-      SWS.toast.show('Please fix the errors', 'Fill in all required fields.', 'error');
+      RSWF.toast.show('Please fix the errors', 'Fill in all required fields.', 'error');
       return;
     }
     const btn = form.querySelector('[type=submit]');
@@ -253,7 +253,7 @@ document.addEventListener('input', e => {
       form.reset();
       form.querySelectorAll('.form-control').forEach(clearValidation);
       document.getElementById('contact-success')?.classList.remove('hidden');
-      SWS.toast.show('Message Sent!', 'We will respond within 2 working days.', 'success');
+      RSWF.toast.show('Message Sent!', 'We will respond within 2 working days.', 'success');
     }, 1800);
   });
 })();
@@ -297,7 +297,7 @@ document.addEventListener('input', e => {
   if (forgotLink && forgotModal) {
     forgotLink.addEventListener('click', e => {
       e.preventDefault();
-      SWS.modal.open('forgot-password-modal');
+      RSWF.modal.open('forgot-password-modal');
     });
   }
   const forgotForm = document.getElementById('forgot-password-form');
@@ -310,8 +310,8 @@ document.addEventListener('input', e => {
       btn.disabled = true;
       btn.innerHTML = '<span class="spinner spinner-sm"></span> Sending...';
       setTimeout(() => {
-        SWS.modal.close('forgot-password-modal');
-        SWS.toast.show('Reset Link Sent', 'Check your email for password reset instructions.', 'success');
+        RSWF.modal.close('forgot-password-modal');
+        RSWF.toast.show('Reset Link Sent', 'Check your email for password reset instructions.', 'success');
         btn.disabled = false;
         btn.textContent = 'Send Reset Link';
         forgotForm.reset();
@@ -344,11 +344,11 @@ document.addEventListener('input', e => {
     function handleFile(input, file, area) {
       const allowed = ['image/jpeg', 'image/png', 'application/pdf'];
       if (!allowed.includes(file.type)) {
-        SWS.toast.show('Invalid File', 'Please upload a JPG, PNG, or PDF file.', 'error');
+        RSWF.toast.show('Invalid File', 'Please upload a JPG, PNG, or PDF file.', 'error');
         return;
       }
       if (file.size > 5 * 1024 * 1024) {
-        SWS.toast.show('File Too Large', 'Maximum file size is 5MB.', 'error');
+        RSWF.toast.show('File Too Large', 'Maximum file size is 5MB.', 'error');
         return;
       }
       const previewEl = area.parentElement.querySelector('.file-preview');

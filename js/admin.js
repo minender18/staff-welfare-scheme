@@ -1,5 +1,5 @@
-/* ========================================
-   STAFF WELFARE SCHEME - ADMIN JS
+﻿/* ========================================
+   RMU Staff Welfare Fund - ADMIN JS
    ======================================== */
 
 'use strict';
@@ -31,7 +31,7 @@
         statusCell.innerHTML = '<i class="fa-solid fa-circle-check"></i> Approved';
       }
       btn.closest('.action-btns').innerHTML = '<span style="font-size:0.8125rem;color:var(--success);font-weight:600"><i class="fa-solid fa-check"></i> Approved</span>';
-      if (window.SWS) SWS.toast.show('Application Approved', 'The applicant has been notified.', 'success');
+      if (window.RSWF) RSWF.toast.show('Application Approved', 'The applicant has been notified.', 'success');
     }
   });
 
@@ -46,7 +46,7 @@
         statusCell.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Rejected';
       }
       btn.closest('.action-btns').innerHTML = '<span style="font-size:0.8125rem;color:var(--error);font-weight:600"><i class="fa-solid fa-xmark"></i> Rejected</span>';
-      if (window.SWS) SWS.toast.show('Application Rejected', 'The applicant has been notified.', 'warning');
+      if (window.RSWF) RSWF.toast.show('Application Rejected', 'The applicant has been notified.', 'warning');
     }
   });
 })();
@@ -75,7 +75,7 @@
         pag.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         // Simulate page change
-        if (window.SWS) SWS.toast.show('Page ' + btn.dataset.page, 'Loading records...', 'info');
+        if (window.RSWF) RSWF.toast.show('Page ' + btn.dataset.page, 'Loading records...', 'info');
       });
     });
   });
@@ -98,7 +98,7 @@ function exportCSV(tableId, filename) {
   a.download = filename || 'export.csv';
   a.click();
   URL.revokeObjectURL(url);
-  if (window.SWS) SWS.toast.show('Export Complete', `${filename} has been downloaded.`, 'success');
+  if (window.RSWF) RSWF.toast.show('Export Complete', `${filename} has been downloaded.`, 'success');
 }
 
 document.querySelectorAll('[data-export-csv]').forEach(btn => {
